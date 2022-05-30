@@ -3,6 +3,7 @@ import BookCollection from './modules/bookCollection.js';
 import { addBookToLS, removeBookLS } from './modules/localStorage.js';
 import handleLinkClick from './modules/navbarLinks.js';
 import clearFormFields from './modules/clearForm.js';
+import insertDate from './modules/date.js';
 
 // Display books on page load
 window.addEventListener('DOMContentLoaded', BookCollection.bookDisplay);
@@ -40,3 +41,6 @@ bookContainer.addEventListener('click', (e) => {
 // Nav-links event
 document.getElementById('nav-links').addEventListener('click', handleLinkClick);
 document.getElementById('defaultOpen').click(); // Click on the list nav-link at default on page load
+
+// Insert Date from Luxon.js
+insertDate();
