@@ -1,5 +1,7 @@
 // Clear form fields
-export const clearFormFields = () => {
+const clearFormFields = () => {
     document.querySelector('#book-name').value = '';
     document.querySelector('#book-author').value = '';
 }
+
+export { clearFormFields };
