@@ -1,4 +1,4 @@
-import { getBooks } from "./modules/localStorage.js";
+import { getBooks } from "./localStorage.js";
 
 export default class BookCollection {
     static bookList = getBooks();
