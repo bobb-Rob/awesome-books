@@ -1,4 +1,5 @@
 import Book from "./modules/book.js";
+import BookCollection from "./modules/bookCollection.js";
 
 
 // Display books on page load
