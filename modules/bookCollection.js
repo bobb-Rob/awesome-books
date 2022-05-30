@@ -3,7 +3,7 @@ import { getBooks } from './localStorage.js';
 export default class BookCollection {
     static list = getBooks();
 
-    static bookCard({ title, author, id }) {
+    static bookCard = ({ title, author, id }) => {
       const cardHolder = document.createElement('div');
       cardHolder.classList.add('book-card');
       cardHolder.id = id; // Each book card holder assigned book id
@@ -20,7 +20,7 @@ export default class BookCollection {
       return cardHolder;
     }
 
-    static addBookUI(book) {
+    static addBookUI = (book) => {
       const bookContainer = document.querySelector('.booksContainer');
       bookContainer.appendChild(BookCollection.bookCard(book));
       // Add Book to list.
@@ -28,7 +28,7 @@ export default class BookCollection {
     }
 
     // Display books in Booklist on page load
-    static bookDisplay() {
+    static bookDisplay = () => {
       const bookContainer = document.querySelector('.booksContainer');
       BookCollection.list.forEach((book) => {
         bookContainer.appendChild(BookCollection.bookCard(book));
@@ -36,7 +36,7 @@ export default class BookCollection {
     }
 
     // Remove book
-    static removeBook(id) {
+    static removeBook = (id) => {
       BookCollection.list = BookCollection.list.filter((item) => (item.id).toString() !== id);
     }
 }
