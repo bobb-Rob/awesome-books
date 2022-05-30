@@ -17,7 +17,7 @@ formEl.addEventListener('click', (e) => {
   if (title !== '' && author !== '') {
     if (e.target.classList.contains('addButton')) {
       const newBook = new Book(title, author);
-      newBook.id = BookCollection.bookList.length + 1;
+      newBook.id = BookCollection.list.length + 1;
       BookCollection.addBookUI(newBook);
       addBookToLS(newBook); // Add book to booklist in localStorage
       clearFormFields();
