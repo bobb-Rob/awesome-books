@@ -1,8 +1,5 @@
 import Book from "./modules/book.js";
-import { getBooks, addBookToLS, removeBookLS } from "./modules/localStorage.js";
-import BookCollection from "./modules/bookCollection.js";
-import handleLinkClick from "./modules/navbarLinks.js";
-import clearFormFields from "./modules/clearForm.js";
+
 
 // Display books on page load
 window.addEventListener('DOMContentLoaded', BookCollection.bookDisplay);
