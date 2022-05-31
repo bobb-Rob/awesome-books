@@ -3,9 +3,7 @@ import BookCollection from './modules/bookCollection.js';
 import { addBookToLS, removeBookLS } from './modules/localStorage.js';
 import handleLinkClick from './modules/navbarLinks.js';
 import clearFormFields from './modules/clearForm.js';
-import insertDate from './modules/date.js';
-
-
+import getDate from './modules/date.js';
 
 // Display books on page load
 window.addEventListener('DOMContentLoaded', BookCollection.bookDisplay);
@@ -46,7 +44,7 @@ document.getElementById('defaultOpen').click(); // Click on the list nav-link at
 
 // Insert Date from Luxon.js
 const navbar = document.querySelector('header');
-  const dateEl = document.createElement('p');
-  dateEl.classList.add('date');
-  dateEl.innerHTML = getDate();
-  navbar.appendChild(dateEl);
+const dateEl = document.createElement('p');
+dateEl.classList.add('date');
+dateEl.innerHTML = getDate();
+navbar.appendChild(dateEl);
