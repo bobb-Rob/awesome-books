@@ -5,6 +5,8 @@ import handleLinkClick from './modules/navbarLinks.js';
 import clearFormFields from './modules/clearForm.js';
 import insertDate from './modules/date.js';
 
+
+
 // Display books on page load
 window.addEventListener('DOMContentLoaded', BookCollection.bookDisplay);
 
@@ -43,4 +45,8 @@ document.getElementById('nav-links').addEventListener('click', handleLinkClick);
 document.getElementById('defaultOpen').click(); // Click on the list nav-link at default on page load
 
 // Insert Date from Luxon.js
-insertDate();
+const navbar = document.querySelector('header');
+  const dateEl = document.createElement('p');
+  dateEl.classList.add('date');
+  dateEl.innerHTML = getDate();
+  navbar.appendChild(dateEl);

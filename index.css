@@ -88,6 +88,13 @@ main {
   height: 35px;
 }
 
+.remove-btn {
+  padding: 5px;
+  border: none;
+  background-color: rgb(179, 4, 4);
+  color: white;
+}
+
 .addButton {
   border: 2px solid black;
   padding: 4px 1rem;
